@@ -33,34 +33,35 @@ MONAI Version: 1.5.0
 ```
 
 
-# Code Structure
+## Code Structure
 
 This directory contains the following core scripts and modules:
 
-Unet.py
-Implements the 3D U-Net architecture used in all U-Net–based experiments.
+- **Unet.py**  
+  Implements the 3D U-Net architecture used in all U-Net–based experiments.
 
-data_maker.py
-Generates the simulated MRI dataset, including hippocampal structures, localized deformations, partial-volume synthesis, and voxel-wise difference maps.
+- **data_maker.py**  
+  Generates the simulated MRI dataset, including hippocampal structures, localized deformations, partial-volume synthesis, and voxel-wise difference maps.
 
-data_loader.py
-Builds the dataset loaders for training, validation, and testing.
-Ensures correct dataset splits and reproducible sampling.
+- **data_loader.py**  
+  Builds the dataset loaders for training, validation, and testing.  
+  Ensures correct dataset splits and reproducible sampling.
 
-train_unet.py
-Trains and validates the 3D U-Net model on the simulated dataset using the WMSE loss function.
+- **train_unet.py**  
+  Trains and validates the 3D U-Net model on the simulated dataset using the WMSE loss function.
 
-train_unet_coarse_fine.py
-Trains the 3D U-Net model using the coarse-to-fine training strategy designed to improve sensitivity to small structural changes.
+- **train_unet_coarse_fine.py**  
+  Trains the 3D U-Net model using the coarse-to-fine training strategy designed to improve sensitivity to small structural changes.
 
-train_swin.py
-Trains and validates the SwinUNETR model on the simulated dataset using the WMSE loss function.
+- **train_swin.py**  
+  Trains and validates the SwinUNETR model on the simulated dataset using the WMSE loss function.
 
-train_swin_coarse_fine.py
-Trains the SwinUNETR model using the coarse-to-fine training strategy on the same simulated dataset.
+- **train_swin_coarse_fine.py**  
+  Trains the SwinUNETR model using the coarse-to-fine training strategy on the same simulated dataset.
 
-All random processes are controlled by fixed random seeds to ensure full reproducibility.
+All random processes are controlled by fixed random seeds to ensure full reproducibility.  
 Please keep the relative path structure unchanged when running the scripts to ensure correct data loading and model checkpoint saving.
+
 
 
 
