@@ -33,7 +33,7 @@ MONAI Version: 1.5.0
 ```
 
 
-Code Structure
+# Code Structure
 
 This directory contains the following core scripts and modules:
 
